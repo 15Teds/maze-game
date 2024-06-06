@@ -1,0 +1,148 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+:root {
+	--width: 500px;
+}
+
+.maze-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.maze-row {
+	display: flex;
+}
+
+.cartoon-container {
+	@apply min-h-screen bg-amber-100;
+	border-radius: 20px;
+	padding: 20px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cartoon-controls {
+	@apply bg-amber-500 border-2 border-black shadow-md shadow-black/50;
+	border-radius: 10px;
+	padding: 15px;
+}
+
+.cartoon-select {
+	@apply bg-amber-300 border-2 border-black shadow-md shadow-black/50;
+	border-radius: 10px;
+	padding: 5px 10px;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	transition: transform 0.2s;
+}
+
+.cartoon-select:hover {
+	transform: scale(1.05);
+}
+
+.cartoon-button {
+	@apply bg-amber-300 border-2 border-black shadow-md shadow-black/50;
+	border-radius: 10px;
+	padding: 10px 20px;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	color: black;
+	cursor: pointer;
+	transition: transform 0.2s;
+}
+
+.cartoon-button:hover {
+	transform: scale(1.05);
+}
+
+.cartoon-text {
+	font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.cartoon-maze {
+	@apply bg-amber-50 border-2 border-black shadow-md shadow-black/50;
+	border-radius: 10px;
+	padding: 10px;
+	margin-top: 20px;
+	position: relative;
+}
+
+.maze-cell-easy {
+	width: calc(var(--width) / 11);
+	height: calc(var(--width) / 11);
+}
+
+.maze-cell-medium {
+	width: calc(var(--width) / 21);
+	height: calc(var(--width) / 21);
+}
+
+.maze-cell-hard {
+	width: calc(var(--width) / 31);
+	height: calc(var(--width) / 31);
+}
+
+.maze-cell-super-hard {
+	width: calc(var(--width) / 41);
+	height: calc(var(--width) / 41);
+}
+
+.maze-cell-crazy {
+	width: calc(var(--width) / 101);
+	height: calc(var(--width) / 101);
+}
+
+.cartoon-cell {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.wall {
+	background-color: #ef8610;
+}
+
+.path {
+	background-color: #fff;
+	border-radius: 5px;
+}
+
+.player {
+	background-color: #ff4444;
+	border-radius: 50%;
+	height: 90%;
+	width: 90%;
+}
+
+.start {
+	background-color: #44ff44;
+	border-radius: 50%;
+	height: 90%;
+	width: 90%;
+}
+
+.end {
+	background-color: #4444ff;
+	border-radius: 50%;
+	height: 90%;
+	width: 90%;
+}
+
+.border {
+	border: 1px solid black;
+}
+
+.vist {
+	background-color: #f0f0f0;
+	text-align: center;
+	display: flex;
+	justify-content: left;
+	align-items: end;
+	font-size: 6px;
+}
+
+.cartoon-win {
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	border: 2px solid #ffcc00;
+	border-radius: 20px;
+	padding: 20px;
+}
