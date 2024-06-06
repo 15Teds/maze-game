@@ -1,10 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {
-	checkWin,
-	generateMaze,
-	isEndReachable,
-	isValidMove,
-} from "./utils/maze";
+import { checkWin, generateMaze, isValidMove } from "./utils/maze";
 
 function App() {
 	const [won, setWon] = useState<boolean>(false);
@@ -21,6 +16,7 @@ function App() {
 	}, []);
 
 	useEffect(() => {
+		console.log(timer);
 		let interval = Math.random();
 		if (won) {
 			interval = setInterval(() => {
@@ -95,19 +91,6 @@ function App() {
 			case 101:
 				return "-crazy";
 		}
-	};
-
-	const handleMoveToStart = () => {
-		setPlayerX(1);
-		setPlayerY(1);
-	};
-
-	const formatTime = (time: number) => {
-		const minutes = Math.floor(time / 60);
-		const seconds = time % 60;
-		return `${minutes.toString().padStart(2, "0")}:${seconds
-			.toString()
-			.padStart(2, "0")}`;
 	};
 
 	return (
